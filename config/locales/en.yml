@@ -4,11 +4,11 @@
 #
 # To use the locales, use `I18n.t`:
 #
-#     I18n.t 'hello'
+#     I18n.t "hello"
 #
 # In views, this is aliased to just `t`:
 #
-#     <%= t('hello') %>
+#     <%= t("hello") %>
 #
 # To use a different locale, set it with `I18n.locale`:
 #
@@ -24,10 +24,21 @@
 # Instead, surround them with single quotes.
 #
 # en:
-#   'true': 'foo'
+#   "true": "foo"
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
   hello: "Hello world"
+  title:
+    home: "Home"
+    about: "About"
+    sample: "Sample App"
+  help: "Help"
+  rortut: "Ruby on Rails Tutorial Sample App"
+  help1: "Get help on the Ruby on Rails Tutorial at the"
+  read1: "To get help on this sample app, see the book"
+  main: "This is the home page for the"
+  intro: "a book and screencast series to teach web development with Ruby on Rails "
+  intro2: "This is the sample application for the tutorial."

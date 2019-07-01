@@ -1,0 +1,12 @@
+vi:
+  title:
+    home: "Trang chủ"
+    about: "Giới thiệu"
+    sample: "Ứng dụng mẫu"
+  help: "Giúp đỡ"
+  rortut: "Ứng dụng mẫu của Rails tutorial"
+  help1: "Xem giúp đỡ tại"
+  read1: "Đọc sách tại"
+  main: "Đây là trang chủ"
+  intro: "là sách dạy Ruby on Rails"
+  intro2: "Đây là trang ứng dụng mẫu"
