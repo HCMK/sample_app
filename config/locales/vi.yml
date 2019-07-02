@@ -19,3 +19,8 @@ vi:
   signup_now: "Đăng Ký ngay!"
   contact_l: "Liên lạc về trang ứng dụng mẫu tại"
   contact_p: "Trang liên lạc"
+  name: "Họ và tên"
+  email: "Địa chỉ Email"
+  password: "Mật khẩu"
+  confirmation: "Nhập lại mật khẩu"
+  create: "Tạo mới tài khoản"
