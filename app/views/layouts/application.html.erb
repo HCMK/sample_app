@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= full_title(yield(:title), t("rortut"))%></title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title><%= full_title yield(:title), t("rortut") %></title>
+      <%= render "layouts/default" %>
   </head>
 
-  <body>
-    <%= link_to "English", locale:"en" %>
-    <%= link_to "Vietnamese", locale:"vi" %>
+  <%= render "layouts/header" %>
+  <body class="container">
     <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
 </html>
