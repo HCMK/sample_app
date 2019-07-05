@@ -51,3 +51,8 @@ en:
   signup_now: "Sign up now!"
   contact_l: "Contact the Ruby on Rails Tutorial about the sample app at the"
   contact_p: "Contact Page"
+  name: "Name"
+  email: "Email"
+  password: "Password"
+  confirmation: "Confirmation"
+  create: "Create my account"
