@@ -1,13 +1,14 @@
 class SessionsController < ApplicationController
+  before_action :loaduser, only: :create
+
   def new; end
 
   def create
-    user = getuser
-    if user&.authenticate params[:session][:password]
-      if user.activated?
-        log_in user
-        session_remember user
-        redirect_back_or user
+    if @user&.authenticate params[:session][:password]
+      if @user.activated?
+        log_in @user
+        session_remember @user
+        redirect_back_or @user
       else
         flash[:warning] = t("not_activated") + t("check_email")
         redirect_to root_url
@@ -25,8 +26,8 @@ class SessionsController < ApplicationController
 
   private
 
-  def getuser
-    User.find_by email: params[:session][:email].downcase
+  def loaduser
+    @user = User.find_by email: params[:session][:email].downcase
   end
 
   def session_remember user
