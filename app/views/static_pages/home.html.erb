@@ -1,15 +1,24 @@
-<% provide :title, t("title.home") %>
-<div class="center jumbotron">
-<h1><%= t "welcome" %></h1>
-<p>
-  <%= t "main"%>
-  <%= link_to "http://www.railstutorial.org/" do %>
-  Ruby on Rails Tutorial
-  <% end %>
-  <%= t "title.sample"%>.
-</p>
-<%= link_to t("signup_now"), signup_path, class: "btn btn-lg btn-primary" %>
-</div>
-
-<%= link_to image_tag("rails.png", alt: "Rails logo"),
-            "http://rubyonrails.org/" %>
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render "shared/user_info" %>
+      </section>
+      <section class="micropost_form">
+        <%= render "shared/micropost_form" %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3><%= t("micropost_feed") %></h3>
+      <%= render "shared/feed" %>
+    </div>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <h1><%= t("welcome") %></h1>
+    <h2>
+      <%= link_to "Ruby on Rails Tutorial", "https://www.railstutorial.org/" %>
+    </h2>
+    <%= link_to t("signup_now"), signup_path, class: "btn btn-lg btn-primary" %>
+  </div>
+<% end %>
