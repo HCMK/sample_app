@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+require File.expand_path('../boot', __FILE__)
 require_relative 'boot'
 
 require 'rails/all'
@@ -12,5 +12,6 @@ module SampleApp
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml').to_s]
     I18n.available_locales = [:vi, :en]
     config.i18n.default_locale = :en
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end

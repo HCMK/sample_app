@@ -7,3 +7,4 @@ expired_limit_hour: 2
 content_max: 140
 mic_per_page: 5
 file_size: 5
+small_avt: 30
